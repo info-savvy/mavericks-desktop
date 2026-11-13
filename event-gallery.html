@@ -1324,6 +1324,17 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
 .vid-tile.fade-in { animation:fadeUp .45s ease both; }
 .vlb-frame video, .vlb-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; background:#000; display:block; }
 .vid-tile { background-size:cover; background-position:center; }
+/* Tiles styled like the homepage "Parties & Shows" event cards */
+.vid-grid { gap:12px; }
+.vid-tile {
+  border:1px solid var(--color-border); border-radius:var(--radius-md);
+  background-color:rgba(10,10,10,.9);
+  transition:border-color .25s ease, box-shadow .25s ease;
+}
+.vid-tile::before { border-radius:inherit; }
+.vid-tile:hover, .vid-tile:focus-visible, .vid-tile.tapped { border-color:var(--color-gold-light); box-shadow:0 4px 18px rgba(201,164,107,.15); }
+.vid-tile:not(.vid-tile--img) .vid-ov { background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.7) 100%); }
+@media(min-width:768px){ .vid-grid { gap:var(--space-md); } }
 .vlb-desc { font-size:15px; line-height:1.7; color:var(--color-white); }
 .vlb-info:empty { display:none; }
 @media(min-width:768px){ .vid-grid { grid-template-columns:repeat(3,1fr); } }
@@ -1427,20 +1438,44 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
     <!-- CATEGORY FILTER — WP: one tab per gallery category -->
     <nav class="gal-jump gal-filter" aria-label="Gallery categories">
       <div class="gal-jump-inner">
-        <button type="button" class="gal-chip active" data-cat="parties" aria-pressed="true">Parties</button>
+        <button type="button" class="gal-chip active" data-cat="dancers" aria-pressed="true">Dancers</button>
         <button type="button" class="gal-chip" data-cat="mavericks-plane" aria-pressed="false">Mavericks Plane</button>
         <button type="button" class="gal-chip" data-cat="having-fun" aria-pressed="false">Having Fun</button>
-        <button type="button" class="gal-chip" data-cat="dancers" aria-pressed="false">Dancers</button>
+        <button type="button" class="gal-chip" data-cat="parties" aria-pressed="false">Parties</button>
       </div>
     </nav>
 
     <!-- GALLERY GRID — media only, no labels or text. Optional description shows in the full-screen view. -->
     <div class="gal-grid-wrap">
       <div class="vid-grid" id="galGrid">
-        <button type="button" class="vid-tile" style="background-image:url('gallery/parties-01.jpg')" data-cat="parties" data-type="video" data-src="gallery/parties-01.mp4" data-poster="gallery/parties-01.jpg" data-desc="" aria-label="Play video">
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-01.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-01.mp4" data-poster="gallery/dancers-01.jpg" data-desc="" aria-label="Play video">
           <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
         </button>
-        <button type="button" class="vid-tile" style="background-image:url('gallery/parties-02.jpg')" data-cat="parties" data-type="video" data-src="gallery/parties-02.mp4" data-poster="gallery/parties-02.jpg" data-desc="" aria-label="Play video">
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-02.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-02.mp4" data-poster="gallery/dancers-02.jpg" data-desc="" aria-label="Play video">
+          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-03.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-03.mp4" data-poster="gallery/dancers-03.jpg" data-desc="" aria-label="Play video">
+          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-04.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-04.mp4" data-poster="gallery/dancers-04.jpg" data-desc="" aria-label="Play video">
+          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-05.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-05.mp4" data-poster="gallery/dancers-05.jpg" data-desc="" aria-label="Play video">
+          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-06.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-06.mp4" data-poster="gallery/dancers-06.jpg" data-desc="" aria-label="Play video">
+          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-07.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-07.mp4" data-poster="gallery/dancers-07.jpg" data-desc="" aria-label="Play video">
+          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-08.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-08.mp4" data-poster="gallery/dancers-08.jpg" data-desc="" aria-label="Play video">
+          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-09.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-09.mp4" data-poster="gallery/dancers-09.jpg" data-desc="" aria-label="Play video">
+          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <button type="button" class="vid-tile" style="background-image:url('gallery/dancers-10.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-10.mp4" data-poster="gallery/dancers-10.jpg" data-desc="" aria-label="Play video">
           <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
         </button>
         <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/plane-01.jpg')" data-cat="mavericks-plane" data-type="video" data-src="gallery/plane-01.mp4" data-poster="gallery/plane-01.jpg" data-desc="" aria-label="Play video">
@@ -1461,34 +1496,10 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
         <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/having-fun-01.jpg')" data-cat="having-fun" data-type="video" data-src="gallery/having-fun-01.mp4" data-poster="gallery/having-fun-01.jpg" data-desc="" aria-label="Play video">
           <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
         </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-01.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-01.mp4" data-poster="gallery/dancers-01.jpg" data-desc="" aria-label="Play video">
+        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/parties-01.jpg')" data-cat="parties" data-type="video" data-src="gallery/parties-01.mp4" data-poster="gallery/parties-01.jpg" data-desc="" aria-label="Play video">
           <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
         </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-02.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-02.mp4" data-poster="gallery/dancers-02.jpg" data-desc="" aria-label="Play video">
-          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-03.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-03.mp4" data-poster="gallery/dancers-03.jpg" data-desc="" aria-label="Play video">
-          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-04.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-04.mp4" data-poster="gallery/dancers-04.jpg" data-desc="" aria-label="Play video">
-          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-05.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-05.mp4" data-poster="gallery/dancers-05.jpg" data-desc="" aria-label="Play video">
-          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-06.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-06.mp4" data-poster="gallery/dancers-06.jpg" data-desc="" aria-label="Play video">
-          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-07.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-07.mp4" data-poster="gallery/dancers-07.jpg" data-desc="" aria-label="Play video">
-          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-08.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-08.mp4" data-poster="gallery/dancers-08.jpg" data-desc="" aria-label="Play video">
-          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-09.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-09.mp4" data-poster="gallery/dancers-09.jpg" data-desc="" aria-label="Play video">
-          <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        </button>
-        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/dancers-10.jpg')" data-cat="dancers" data-type="video" data-src="gallery/dancers-10.mp4" data-poster="gallery/dancers-10.jpg" data-desc="" aria-label="Play video">
+        <button type="button" class="vid-tile is-filtered" style="background-image:url('gallery/parties-02.jpg')" data-cat="parties" data-type="video" data-src="gallery/parties-02.mp4" data-poster="gallery/parties-02.jpg" data-desc="" aria-label="Play video">
           <span class="vid-ov"></span><span class="vid-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
         </button>
       </div>
